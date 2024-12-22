@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="512" cy="512" r="450" stroke="url(#gradient1)" stroke-width="2" stroke-dasharray="8 8"/>
+  <path d="M512 650C650 500 750 400 750 300C750 200 650 150 600 150C550 150 512 200 512 200C512 200 474 150 424 150C374 150 274 200 274 300C274 400 374 500 512 650Z" fill="url(#gradient2)"/>
+  <g opacity="0.6">
+    <path d="M362 300H662M362 400H662M362 500H662" stroke="#4F46E5" stroke-width="2"/>
+    <circle cx="412" cy="300" r="5" fill="#4F46E5"/>
+    <circle cx="512" cy="400" r="5" fill="#4F46E5"/>
+    <circle cx="612" cy="500" r="5" fill="#4F46E5"/>
+  </g>
+  <circle cx="312" cy="512" r="8" fill="#10B981"/>
+  <circle cx="712" cy="512" r="8" fill="#F59E0B"/>
+  <defs>
+    <linearGradient id="gradient1" x1="62" y1="62" x2="962" y2="962" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="gradient2" x1="274" y1="150" x2="750" y2="650" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+</svg>

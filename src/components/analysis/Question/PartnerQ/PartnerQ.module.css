@@ -1,0 +1,237 @@
+.container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ffd6e7 0%, #fff4e6 50%, #f0f5ff 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.questionCard {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px);
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.headerIcon {
+  font-size: 48px;
+  color: #ff85c0;
+  margin-bottom: 16px;
+}
+
+.header h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 32px;
+  transition: all 0.3s ease;
+}
+
+.section:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: #ff85c0;
+  font-size: 18px;
+}
+
+.sectionIcon {
+  font-size: 24px;
+}
+
+.ageSlider {
+  margin: 20px 0;
+}
+
+.ageSlider :global(.ant-slider-track) {
+  background: linear-gradient(90deg, #ff85c0, #b37feb) !important;
+}
+
+.ageSlider :global(.ant-slider-handle) {
+  border-color: #ff85c0 !important;
+  width: 24px !important;
+  height: 24px !important;
+  margin-top: -10px !important;
+}
+
+.ageSlider :global(.ant-slider-handle:hover) {
+  box-shadow: 0 0 0 5px rgba(255, 133, 192, 0.12) !important;
+}
+
+.ageSlider :global(.ant-slider-mark-text) {
+  color: #666 !important;
+}
+
+.traitsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 8px;
+}
+
+.traitTag {
+  cursor: pointer;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: 2px solid #eee;
+  background: #fff;
+  color: #666;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.traitTag:hover {
+  border-color: #ff85c0;
+  color: #ff85c0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 133, 192, 0.1);
+}
+
+.traitTag.selected {
+  background: linear-gradient(45deg, #ff85c0, #b37feb);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 133, 192, 0.2);
+}
+
+.checkIcon {
+  font-size: 14px;
+  animation: zoomIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.prevButton {
+  height: 48px;
+  padding: 0 32px;
+  font-size: 16px;
+  border-radius: 24px;
+  border: 2px solid #ff85c0;
+  color: #ff85c0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.prevButton:hover {
+  color: #fff;
+  background: #ff85c0;
+}
+
+.submitButton {
+  height: 48px;
+  padding: 0 48px;
+  font-size: 16px;
+  border-radius: 24px;
+  background: linear-gradient(45deg, #ff85c0, #b37feb);
+  border: none;
+  box-shadow: 0 8px 16px rgba(255, 133, 192, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(255, 133, 192, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .questionCard {
+    padding: 24px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .traitsContainer {
+    gap: 12px;
+  }
+
+  .traitTag {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .prevButton,
+  .submitButton {
+    width: 100%;
+  }
+} 

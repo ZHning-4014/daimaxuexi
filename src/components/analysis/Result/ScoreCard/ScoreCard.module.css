@@ -1,0 +1,248 @@
+.container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ffd6e7 0%, #fff4e6 50%, #f0f5ff 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.scoreCard {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(20px);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 24px;
+  padding: 40px;
+  animation: slideUp 0.5s ease-out;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+  animation: fadeIn 0.5s ease-out 0.2s backwards;
+}
+
+.headerIcon {
+  font-size: 48px;
+  color: #ff85c0;
+  margin-bottom: 16px;
+}
+
+.header h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff85c0, #b37feb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  font-size: 16px;
+  color: #666;
+  opacity: 0.8;
+}
+
+.totalScore {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.scoreCircle {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: zoomIn 0.5s ease-out;
+}
+
+.scoreValue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreValue span {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+}
+
+.scoreValue small {
+  font-size: 16px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.scoreTag {
+  font-size: 16px;
+  padding: 4px 16px;
+  border-radius: 12px;
+}
+
+.dimensions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.dimensionScores {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dimensionItem {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  animation: slideIn 0.5s ease-out;
+}
+
+.dimensionItem:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.dimensionHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: #ff85c0;
+  font-size: 18px;
+}
+
+.dimensionHeader :global(.anticon) {
+  font-size: 20px;
+}
+
+.dimensionProgress {
+  margin-bottom: 16px;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestionTag {
+  border-radius: 12px;
+  padding: 4px 12px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.radarChart {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 24px;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.scoreDisplay {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  animation: fadeIn 0.5s ease-out 0.4s backwards;
+}
+
+.analysis {
+  margin-top: 40px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  animation: fadeIn 0.5s ease-out 0.6s backwards;
+}
+
+.analysis h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.analysis p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .scoreCard {
+    padding: 24px;
+  }
+
+  .dimensions {
+    grid-template-columns: 1fr;
+  }
+
+  .dimensionItem {
+    padding: 20px;
+  }
+
+  .radarChart {
+    min-height: 250px;
+  }
+} 
